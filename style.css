@@ -1,0 +1,103 @@
+:root {
+  --verde-oscuro: #4C6A4B;
+  --beige-claro: #E8DCC3;
+  --naranja-suave: #D9924A;
+  --marron-suave: #8A6A52;
+  --verde-claro: #7D8A76;
+  --radius: 12px;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--verde-oscuro);
+  background: var(--beige-claro);
+  line-height: 1.6;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to bottom right, var(--verde-oscuro), var(--verde-claro));
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero__logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+.hero__subtitle {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #f9f9f9;
+}
+.hero__botones {
+  margin-top: 1.5rem;
+}
+.btn {
+  display: inline-block;
+  background: var(--naranja-suave);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover { background: var(--marron-suave); }
+.btn--alt { background: var(--beige-claro); color: var(--verde-oscuro); }
+.btn--alt:hover { background: #fff; }
+.btn--whatsapp { background: #25D366; }
+
+/* Secciones */
+main { padding: 60px 20px; }
+h2 { font-family: 'Playfair Display', serif; color: var(--verde-oscuro); margin-bottom: 1rem; }
+ul { list-style: disc; padding-left: 1.5rem; }
+.cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 1rem;
+}
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.card img { width: 100%; height: 220px; object-fit: cover; }
+.card__body { padding: 1rem; }
+
+/* CTA */
+.cta {
+  text-align: center;
+  margin-top: 60px;
+  padding: 40px 20px;
+  background: var(--verde-oscuro);
+  color: #fff;
+  border-radius: var(--radius);
+}
+
+/* WhatsApp flotante */
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #25D366;
+  border-radius: 50%;
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+.whatsapp img { width: 32px; height: 32px; }
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--verde-oscuro);
+  color: #fff;
+  padding: 8px;
+  transition: top 0.3s;
+}
+.skip-link:focus { top: 0; }
