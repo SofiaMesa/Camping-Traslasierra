@@ -9,39 +9,50 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Camping Traslasierra" />
-  <meta property="og:description" content="Tu lugar ideal para disfrutar la naturaleza del Valle de Traslasierra." />
+  <meta property="og:description" content="Naturaleza, tranquilidad y confort en el corazón del Valle de Traslasierra." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="img\Logo_Traslasierra_2.png" />
+  <meta property="og:image" content="img/Logo_Traslasierra.png" />
+  <meta property="og:locale" content="es_AR" />
 
-  <!-- Fuentes y estilos -->
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <link rel="icon" href="img/logo-traslasierra.png" type="image/png" />
-  <link rel="stylesheet" href="style.css?v=1" />
-  <script>document.documentElement.classList.remove('no-js');</script>
+
+  <link rel="icon" href="img/Logo_Traslasierra.png" type="image/png" />
+  <link rel="stylesheet" href="style.css?v=3" />
+
+  <script>
+    // Quitar no-js lo antes posible
+    document.documentElement.classList.remove('no-js');
+  </script>
 </head>
 
-<body class="index-traslasierra">
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
+  <!-- Header inyectado -->
   <div data-include="header.html"></div>
 
-  <section class="hero" aria-labelledby="titulo-principal">
+  <!-- BANNER SUPERIOR -->
+  <section class="page-banner" aria-label="Información importante">
+    <p>📍 Nono, Córdoba · ✅ Parcelas con/sin quincho · 🕘 Duchas con agua caliente</p>
+  </section>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio" aria-label="Presentación">
     <div class="hero__inner">
-      <img class="hero__logo" src="img\Logo_Traslasierra_2.png" alt="Logo Camping Traslasierra" loading="lazy" />
-      <h1 id="titulo-principal">Camping Traslasierra</h1>
+      <img class="hero__logo" src="img/Logo_Traslasierra.png" alt="Logo Camping Traslasierra" width="140" height="140" decoding="async" />
+      <h1>Camping Traslasierra</h1>
       <p class="hero__subtitle">Naturaleza, tranquilidad y confort en el corazón del valle.</p>
-      <div class="hero__botones">
-        <a href="#servicios" class="btn">Ver servicios</a>
-        <a href="reserva.html" class="btn btn--alt">Reservar</a>
-      </div>
+      <a href="#servicios" class="btn btn--hero">Ver servicios</a>
     </div>
   </section>
 
   <main id="contenido">
-    <section class="intro">
-      <h2>Tu espacio de descanso</h2>
+    <!-- INTRO -->
+    <section class="intro" aria-labelledby="intro-title">
+      <h2 id="intro-title">Tu espacio de descanso</h2>
       <p>En Camping Traslasierra contamos con amplias parcelas arboladas, acceso directo al río y servicios que garantizan una estadía cómoda y segura.</p>
       <ul>
         <li>Parcelas con o sin quincho.</li>
@@ -50,50 +61,223 @@
       </ul>
     </section>
 
-    <section id="servicios" class="servicios">
-      <h2>Servicios principales</h2>
-      <div class="cards">
-        <article class="card">
-          <img src="img/quincho.jpg" alt="Parcela con quincho techado" loading="lazy" />
-          <div class="card__body">
-            <h3>Parcelas con Quincho</h3>
-            <p>Quinchos equipados con parrilla, luz y espacio para dos carpas grandes.</p>
-          </div>
-        </article>
+    <!-- SERVICIOS CON CARRUSELES -->
+    <section id="servicios" class="servicios" aria-labelledby="servicios-title">
+      <h2 id="servicios-title">Servicios principales</h2>
 
-        <article class="card">
-          <img src="img/sanitarios.jpg" alt="Sanitarios con duchas de agua caliente" loading="lazy" />
-          <div class="card__body">
-            <h3>Sanitarios con agua caliente</h3>
-            <p>Instalaciones limpias y cómodas con duchas las 24 horas.</p>
+      <!-- Quinchos -->
+      <article class="servicio" aria-labelledby="serv-quinchos">
+        <h3 id="serv-quinchos">Parcelas con Quincho</h3>
+        <div class="carousel" id="quinchos-carousel">
+          <button class="prev" type="button" aria-label="Imagen anterior" onclick="moveSlide('quinchos', -1)">‹</button>
+          <div class="carousel-track">
+            <img src="img/Quinchos_8.jpeg" alt="Quincho con parrilla" loading="lazy" decoding="async" />
+            <img src="img/Quinchos_12.jpeg" alt="Vista de quincho techado" loading="lazy" decoding="async" />
+            <img src="img/Mascota_7.jpeg" alt="Zona de parrilla en quincho" loading="lazy" decoding="async" />
+            <img src="img/Quinchos_22.jpeg" alt="Parrilla en quincho moderno" loading="lazy" decoding="async" />
+            <img src="img/Carpas_49.jpeg" alt="Sector de carpas junto a quincho" loading="lazy" decoding="async" />
+            <img src="img/Carpas_60.jpeg" alt="Parrilla y mesa en quincho" loading="lazy" decoding="async" />
           </div>
-        </article>
+          <button class="next" type="button" aria-label="Imagen siguiente" onclick="moveSlide('quinchos', 1)">›</button>
+        </div>
+        <p>Espacios equipados con parrilla, luz y capacidad para dos carpas grandes.</p>
+      </article>
 
-        <article class="card">
-          <img src="img/rio.jpg" alt="Río y playa natural" loading="lazy" />
-          <div class="card__body">
-            <h3>Acceso al Río</h3>
-            <p>Disfrutá del río a pocos metros de tu parcela, ideal para refrescarte o relajarte.</p>
+      <!-- Río -->
+      <article class="servicio" aria-labelledby="serv-rio">
+        <h3 id="serv-rio">Acceso al Río</h3>
+        <div class="carousel" id="rio-carousel">
+          <button class="prev" type="button" aria-label="Imagen anterior" onclick="moveSlide('rio', -1)">‹</button>
+          <div class="carousel-track">
+            <img src="img/Paisaje_2.jpeg" alt="Río cristalino" loading="lazy" decoding="async" />
+            <img src="img/Rio_20.jpeg" alt="Playa natural en el río" loading="lazy" decoding="async" />
+            <img src="img/Rio.jpeg" alt="Orilla del río rodeada de árboles" loading="lazy" decoding="async" />
+            <img src="img/Carpas_31.jpeg" alt="Zona de acampe cercana al río" loading="lazy" decoding="async" />
           </div>
-        </article>
+          <button class="next" type="button" aria-label="Imagen siguiente" onclick="moveSlide('rio', 1)">›</button>
+        </div>
+        <p>Disfrutá del agua cristalina del río a pocos metros de tu parcela.</p>
+      </article>
+
+      <!-- Proveeduría -->
+      <article class="servicio" aria-labelledby="serv-prove">
+        <h3 id="serv-prove">Proveeduría</h3>
+        <div class="carousel" id="proveeduria-carousel">
+          <button class="prev" type="button" aria-label="Imagen anterior" onclick="moveSlide('proveeduria', -1)">‹</button>
+          <div class="carousel-track">
+            <img src="img/Proveeduria_6.jpeg" alt="Proveeduría con productos básicos" loading="lazy" decoding="async" />
+            <img src="img/Proveeduria_7.jpeg" alt="Entrada de la proveeduría" loading="lazy" decoding="async" />
+            <img src="img/Paisaje_8.jpg" alt="Mostrador de la proveeduría" loading="lazy" decoding="async" />
+          </div>
+          <button class="next" type="button" aria-label="Imagen siguiente" onclick="moveSlide('proveeduria', 1)">›</button>
+        </div>
+        <p>Encontrá hielo, bebidas frías, carbón, leña y artículos esenciales sin salir del camping.</p>
+      </article>
+    </section>
+
+    <!-- RESEÑAS -->
+    <section class="reviews" aria-labelledby="reviews-title">
+      <h2 id="reviews-title">Reseñas de nuestros visitantes</h2>
+
+      <div class="reviews-slider" aria-live="polite">
+        <div class="review active" data-rating="4.8">
+          <div class="stars" aria-hidden="true"></div>
+          <p>“Hermoso lugar, mucha sombra y el río es espectacular.” — Laura G.</p>
+        </div>
+        <div class="review" data-rating="4.6">
+          <div class="stars" aria-hidden="true"></div>
+          <p>“Excelente atención, limpio y tranquilo. ¡Volveremos!” — Matías P.</p>
+        </div>
+        <div class="review" data-rating="5">
+          <div class="stars" aria-hidden="true"></div>
+          <p>“Los quinchos son cómodos y el paisaje increíble.” — Fernanda R.</p>
+        </div>
+      </div>
+
+      <p class="reviews-link">
+        <a href="https://maps.app.goo.gl/ReMK7Keghd1KpLk76" target="_blank" rel="noopener">Ver más reseñas en Google Maps</a>
+      </p>
+    </section>
+
+    <!-- MAPA -->
+    <section class="mapa" aria-labelledby="mapa-title">
+      <h2 id="mapa-title">¿Dónde estamos?</h2>
+      <div class="mapa-frame full-bleed">
+        <iframe
+          title="Ubicación de Camping Traslasierra"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1695.5118062949348!2d-65.019123!3d-31.7971064!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d28d976877733%3A0x8cc3431301904a7d!2sCamping%20Traslasierra!5e0!3m2!1ses-419!2sar!4v1761691020052!5m2!1ses-419!2sar"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </section>
 
-    <section class="cta">
-      <h2>Consultanos por WhatsApp</h2>
-      <a class="btn btn--whatsapp" href="https://wa.me/5493518003562" target="_blank" rel="noopener">
-        Escribir al +54 9 3518 00-3562
-      </a>
+    <!-- CTA -->
+    <section class="cta" aria-labelledby="cta-title">
+      <h1 id="cta-title">¿Tenés dudas?</h1>
+      <p>Escribinos por WhatsApp, te respondemos al instante.</p>
+      <a class="btn btn--whatsapp" href="https://wa.me/5493518003562" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp al Camping Traslasierra">Enviar mensaje</a>
     </section>
   </main>
 
+  <!-- Footer inyectado -->
   <div data-include="footer.html"></div>
 
-  <a class="whatsapp" href="https://wa.me/5493518003562" target="_blank" aria-label="WhatsApp Camping Traslasierra">
-    <img src="https://icongr.am/fontawesome/whatsapp.svg?size=32&color=ffffff" alt="">
+  <!-- WhatsApp flotante -->
+  <a class="whatsapp" href="https://wa.me/5493518003562" target="_blank" rel="noopener" aria-label="WhatsApp Camping Traslasierra">
+    <img src="https://icongr.am/fontawesome/whatsapp.svg?size=28&color=ffffff" alt="" width="28" height="28" decoding="async" />
   </a>
 
+  <!-- Includes (usa tu includes.js que resuelve paths en GitHub Pages) -->
   <script src="includes.js" defer></script>
-  <script src="script.js" defer></script>
+
+  <script>
+    // Preferencias de usuario: reducir movimiento
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Carruseles: asegurar ancho de cada slide = 100% para que el translateX funcione aunque falte CSS específico.
+    function initCarousels() {
+      document.querySelectorAll('.carousel').forEach(carouselEl => {
+        const track = carouselEl.querySelector('.carousel-track');
+        if (!track) return;
+        track.style.display = 'flex';
+        track.style.transition = reduceMotion ? 'none' : 'transform .5s ease';
+        [...track.children].forEach(child => {
+          child.style.flex = '0 0 100%';
+          child.style.maxWidth = '100%';
+          child.loading = child.loading || 'lazy';
+          child.decoding = child.decoding || 'async';
+        });
+      });
+    }
+
+    const indices = { quinchos: 0, rio: 0, proveeduria: 0 };
+    function moveSlide(id, dir) {
+      const track = document.querySelector(`#${id}-carousel .carousel-track`);
+      if (!track) return;
+      const slides = track.children.length;
+      indices[id] = (indices[id] + dir + slides) % slides;
+      track.style.transform = `translateX(-${indices[id] * 100}%)`;
+    }
+
+    // Reseñas automáticas (con respeto a reduce-motion)
+    function initReviews() {
+      const reviews = document.querySelectorAll('.reviews .review');
+      if (reviews.length === 0 || reduceMotion) return;
+      let currentReview = 0;
+      setInterval(() => {
+        reviews[currentReview].classList.remove('active');
+        currentReview = (currentReview + 1) % reviews.length;
+        reviews[currentReview].classList.add('active');
+      }, 5000);
+    }
+
+    // Init cuando el DOM está listo
+    document.addEventListener('DOMContentLoaded', () => {
+      initCarousels();
+      initReviews();
+    });
+  </script>
+
+  <script>
+(function(){
+  const body = document.body;
+  const header = document.querySelector('.site-header');
+  const toggle = document.querySelector('.nav-toggle');
+  const drawer = document.getElementById('mobile-drawer');
+  const overlay = document.querySelector('.drawer-overlay');
+  const closeBtn = document.querySelector('.drawer-close');
+
+  // Sticky state
+  function onScroll(){
+    if (window.scrollY > 8) body.classList.add('is-scrolled');
+    else body.classList.remove('is-scrolled');
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Abrir / cerrar
+  function openNav(){
+    body.classList.add('nav-open');
+    drawer.hidden = false;
+    overlay.hidden = false;
+    toggle.setAttribute('aria-expanded', 'true');
+    // foco
+    setTimeout(()=> drawer.querySelector('a,button')?.focus(), 50);
+  }
+  function closeNav(){
+    body.classList.remove('nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    overlay.hidden = true;
+    // cierro visualmente y escondo al terminar transición
+    drawer.addEventListener('transitionend', function h(){
+      if (!body.classList.contains('nav-open')) { drawer.hidden = true; }
+      drawer.removeEventListener('transitionend', h);
+    });
+    toggle.focus();
+  }
+
+  toggle?.addEventListener('click', (e)=>{
+    if (!body.classList.contains('nav-open')) openNav(); else closeNav();
+  });
+  overlay?.addEventListener('click', closeNav);
+  closeBtn?.addEventListener('click', closeNav);
+
+  // Cerrar con ESC
+  document.addEventListener('keydown', (e)=>{
+    if (e.key === 'Escape' && body.classList.contains('nav-open')) closeNav();
+  });
+
+  // Cerrar al navegar en mobile
+  drawer?.addEventListener('click', (e)=>{
+    if (e.target.tagName === 'A') closeNav();
+  });
+})();
+</script>
+
+
+  <noscript>
+    <p style="padding:1rem; text-align:center">Este sitio funciona mejor con JavaScript habilitado. Igual podés ver la información principal sin animaciones ni componentes interactivos.</p>
+  </noscript>
 </body>
 </html>

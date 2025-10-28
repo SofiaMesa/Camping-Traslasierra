@@ -1,0 +1,51 @@
+<!-- =========================================================
+= HEADER · Camping Traslasierra (versión moderna y accesible)
+========================================================= -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Ir al inicio">
+      <img src="img/Logo_Traslasierra.png" alt="Camping Traslasierra" width="44" height="44" />
+      <span class="brand__txt">Camping Traslasierra</span>
+    </a>
+
+    <!-- Navegación desktop -->
+    <nav class="nav-desktop" aria-label="Principal">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#galeria">Galería</a>
+      <a href="reserva.html">Reservar</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+
+    <!-- CTA -->
+    <a class="btn btn--whatsapp header-cta" href="https://wa.me/5493518003562" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+      WhatsApp
+    </a>
+
+    <!-- Botón menú mobile -->
+    <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-controls="mobile-drawer" aria-expanded="false">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <!-- Overlay -->
+  <div class="drawer-overlay" hidden></div>
+
+  <!-- Drawer mobile -->
+  <nav id="mobile-drawer" class="mobile-drawer" aria-label="Menú móvil" hidden>
+    <div class="drawer-head">
+      <img src="img/Logo_Traslasierra.png" alt="" width="40" height="40" />
+      <button class="drawer-close" type="button" aria-label="Cerrar menú">×</button>
+    </div>
+    <ul class="drawer-nav">
+      <li><a href="index.html#inicio">Inicio</a></li>
+      <li><a href="index.html#servicios">Servicios</a></li>
+      <li><a href="index.html#galeria">Galería</a></li>
+      <li><a href="reserva.html">Reservar</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn btn--whatsapp drawer-cta" href="https://wa.me/5493518003562" target="_blank" rel="noopener">Chatear por WhatsApp</a>
+  </nav>
+</header>
